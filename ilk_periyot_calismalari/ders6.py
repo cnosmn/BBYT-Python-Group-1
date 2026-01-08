@@ -147,4 +147,3 @@ while True:
     elif kullanici_secimi == "4":
         print("Sistemden çıkılıyor. İyi günler!")
         break
-    
