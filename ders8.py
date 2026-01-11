@@ -63,8 +63,11 @@ class Ogrenci(Kisi):
     def bilgileri_yaz(self):
         temel_bilgiler = super().bilgileri_yaz()
         return temel_bilgiler + " Öğrenci No: " + str(self.__ogrenci_no) + " Sınıf: " + self.__sinif
-
-
+    
+    # override()
+    def gorev_yap(self):
+        kisi_gorev = super().gorev_yap()
+        return kisi_gorev + "Öğrenci "+ self.__sinif + " sınıfında derse gidiyor."
 
 class Ogretmen(Kisi):
     def __init__(self, ad, soyad, yas, bolum,maas):
@@ -92,8 +95,9 @@ class Ogretmen(Kisi):
         temel_bilgiler = super().bilgileri_yaz()
         return temel_bilgiler + " Bölüm: " + self.__bolum + " Maaş: " + str(self.__maas)
 
-
-
+     # override()
+    def gorev_yap(self):
+        return "Öğretmen "+ self.__bolum + " uzmanlığında derse giriyor."
 
 
 kisi1 = Kisi("Ali", "Veli", 30)
@@ -115,3 +119,28 @@ print(ogretmen1.bilgileri_yaz())
 print(ogretmen2.gorev_yap())
 
 print("ogretmen1.ad : ",ogretmen1.ad)
+
+
+
+#Yeni Alt Sınıf: Memur (Kalıtım)
+
+"""
+İstenilenler
+
+Kisi sınıfından türeyen yeni bir sınıf yazınız:
+
+class Memur(Kisi):
+Özellikler
+
+-birim
+-calisma_saati
+-Metotlar
+
+-bilgileri_yaz() → override edilecek
+-gorev_yap() → override edilecek
+
+Örnek Çıktı
+Ad: Hasan Soyad: Çelik, Yaş: 45 Birim: Yazı İşleri Çalışma Saati: 8
+Hasan görevini yapıyor. Memur olarak çalışıyor.
+
+"""
