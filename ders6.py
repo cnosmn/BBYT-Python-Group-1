@@ -53,12 +53,12 @@ class Ogrenci :
         notlar
         ):
 
-    self.__isim = isim
-    self.__soyisim = soyisim
-    self.__numara = numara
-    self.__sinif = sinif
-    self.__cinsiyet = cinsiyet
-    self.__notlar = notlar
+        self.__isim = isim
+        self.__soyisim = soyisim
+        self.__numara = numara
+        self.__sinif = sinif
+        self.__cinsiyet = cinsiyet
+        self.__notlar = notlar
 
     @property
     def isim(self):
