@@ -1,0 +1,29 @@
+[
+    {
+        "ad": "Ahmet",
+        "soyad": "Yılmaz",
+        "beceriler": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "ad": "Ayşe",
+        "soyad": "Kara",
+        "beceriler": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "ad": "Mehmet",
+        "soyad": "Demir",
+        "beceriler": [
+            "Java",
+            "Spring",
+            "Hibernate"
+        ]
+    }
+]

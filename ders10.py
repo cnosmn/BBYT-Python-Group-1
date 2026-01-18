@@ -1,4 +1,5 @@
 
+import json
 # PYTHON DOSYA İŞLEMLERİ
 
 # Dosya açma modları
@@ -47,3 +48,42 @@ def dosya_var_mi(dosya_adi):
     
 print(dosya_var_mi("database.txt"))  # True
 print(dosya_var_mi("olmayan_dosya.txt"))  # False
+
+
+
+
+# JSON dosya işlemleri
+veri = [
+    {
+    "ad": "Ahmet",
+    "soyad": "Yılmaz",
+    "beceriler": ["Python", "Java", "C++"]
+},
+{
+    "ad": "Ayşe",
+    "soyad": "Kara",
+    "beceriler": ["JavaScript", "HTML", "CSS"]
+},
+{
+    "ad": "Mehmet",
+    "soyad": "Demir",
+    "beceriler": ["Java", "Spring", "Hibernate"]
+}
+]
+# JSON dosyasına yazma
+# with open("database.json", "w", encoding="utf-8") as json_dosya:
+#     json.dump(veri, json_dosya, ensure_ascii=False, indent=4)
+
+def veri_kaydet(dosya_adi, veri, mode="w"):
+    with open(dosya_adi, mode, encoding="utf-8") as json_dosya:
+        json.dump(veri, json_dosya, ensure_ascii=False, indent=4)
+
+def veri_oku(dosya_adi):
+    with open(dosya_adi, "r", encoding="utf-8") as json_dosya:
+        veri = json.load(json_dosya)
+        return veri
+
+veri_kaydet("database.json", veri, mode="w")
+okunan_veri = veri_oku("database.json")
+print(okunan_veri)
+print(type(okunan_veri))
